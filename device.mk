@@ -34,6 +34,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8937
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Utils
 PRODUCT_PACKAGES += \
     blksetro.mi8937
