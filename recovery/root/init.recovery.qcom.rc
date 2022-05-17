@@ -1,16 +1,9 @@
 import /init.recovery.qcom_decrypt.rc
 
-service set-device-props /system/bin/set-device-props.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     export ANDROID_ROOT /system_root
 
 on init
-    start set-device-props
+    write /sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0038/wakeup_mode 1
