@@ -1,0 +1,10 @@
+cc_binary {
+    name: "blksetro",
+    recovery: true,
+    srcs: ["blksetro.c"],
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+}
