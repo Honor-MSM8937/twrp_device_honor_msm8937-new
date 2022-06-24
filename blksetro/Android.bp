@@ -1,5 +1,5 @@
 cc_binary {
-    name: "blksetro",
+    name: "blksetro.mi8937",
     recovery: true,
     srcs: ["blksetro.c"],
     cflags: [
