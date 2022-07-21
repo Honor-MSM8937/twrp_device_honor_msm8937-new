@@ -90,6 +90,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_VENDOR := product
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
