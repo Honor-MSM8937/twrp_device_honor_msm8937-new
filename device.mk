@@ -42,4 +42,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     blksetro.hw8937
 
+# F2FS
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 $(call inherit-product-if-exists, vendor/extras/product.mk)

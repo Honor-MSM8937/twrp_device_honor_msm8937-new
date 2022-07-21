@@ -14,18 +14,23 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_hw8937.mk
+# Release name
+PRODUCT_RELEASE_NAME := hw8937
 
-COMMON_LUNCH_CHOICES := \
-	omni_hw8937-user \
-	omni_hw8937-userdebug \
-	omni_hw8937-eng
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/twrp_hw8937.mk
+# Inherit from device
+$(call inherit-product, device/huawei/hw8937/device.mk)
 
-COMMON_LUNCH_CHOICES += \
-	twrp_hw8937-user \
-	twrp_hw8937-userdebug \
-	twrp_hw8937-eng
+# Inherit common product files.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Set those variables here to overwrite the inherited values.
+BOARD_VENDOR := Huawei
+PRODUCT_BRAND := Huawei
+PRODUCT_DEVICE := hw8937
+PRODUCT_NAME := twrp_hw8937
+PRODUCT_MANUFACTURER := Huawei
+PRODUCT_MODEL := Honor 7A Pro
+TARGET_VENDOR := Huawei
