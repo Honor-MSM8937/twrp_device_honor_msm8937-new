@@ -1,5 +1,7 @@
 # android_device_huawei_hw8937
 
+## State: Bootable.
+
 For building TWRP for Huawei/Honor MSM8937 Devices
 
 To compile:
